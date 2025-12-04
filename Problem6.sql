@@ -1,4 +1,4 @@
--- CS580 Project - Problem 6
+Problem 6 — Running the 3-Line Join in MySQL
 
 SET GLOBAL local_infile = 1;
 
