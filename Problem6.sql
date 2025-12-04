@@ -1,3 +1,8 @@
+-- =========================================================
+-- CS580 Project - Problem 6
+-- Run the 3-line join using the dataset generated in Problem 5
+-- =========================================================
+
 SET GLOBAL local_infile = 1;
 
 -- Create and use database
@@ -27,21 +32,23 @@ CREATE TABLE R3 (
 
 -- =========================================================
 -- UPDATE THIS PATH ONLY ↓↓↓
+-- This should point to the folder where R1_p5.csv, R2_p5.csv, R3_p5.csv exist
 -- =========================================================
--- Your folder path: C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/QueryRelations/
+-- Example:
+-- C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/
 -- =========================================================
 
-LOAD DATA LOCAL INFILE 'C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/QueryRelations/R1.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/R1_p5.csv'
 INTO TABLE R1
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE 'C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/QueryRelations/R2.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/R2_p5.csv'
 INTO TABLE R2
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE 'C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/QueryRelations/R3.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/Pradnya/Downloads/CS580Git/CS580_PROJECT/R3_p5.csv'
 INTO TABLE R3
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
@@ -64,4 +71,3 @@ JOIN R3 ON R1.A1 = R3.A1 AND R2.A3 = R3.A3;
 -- =========================================================
 -- END OF Problem 6
 -- =========================================================
-
